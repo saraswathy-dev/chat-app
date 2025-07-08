@@ -1,8 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const User = require("../model/user");
-
-const authMiddleware = require("../middleware/authmiddleware");
+const User = require("./../model/user");
+const authMiddleware = require("./../middleware/authmiddleware");
 
 //get details of current user
 router.get("/get-logged-user", authMiddleware, async (req, res) => {
@@ -21,7 +20,6 @@ router.get("/get-logged-user", authMiddleware, async (req, res) => {
     });
   }
 });
-
 //get all users
 
 router.get("/get-all-user", authMiddleware, async (req, res) => {
